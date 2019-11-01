@@ -8,6 +8,22 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Text("FloatingActionButton"),),
+      body: Text("Conteúdo"),
+
+
+
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.yellow,
+        elevation: 10,
+//        mini: true,
+        child: Icon(Icons.add),
+        onPressed: (){
+          print("Resultado: botão pressionado!");
+        },
+      ),
+    );
   }
 }
