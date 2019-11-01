@@ -12,7 +12,9 @@ class _HomeState extends State<Home> {
       appBar: AppBar(title: Text("FloatingActionButton"),),
       body: Text("Conteúdo"),
 
-
+      floatingActionButtonLocation:
+//      FloatingActionButtonLocation.endFloat,
+      FloatingActionButtonLocation.endDocked,
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
@@ -23,6 +25,16 @@ class _HomeState extends State<Home> {
         onPressed: (){
           print("Resultado: botão pressionado!");
         },
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          children: <Widget>[
+            IconButton(
+              onPressed: (){},
+              icon: Icon(Icons.menu),
+            )
+          ],
+        ),
       ),
     );
   }
